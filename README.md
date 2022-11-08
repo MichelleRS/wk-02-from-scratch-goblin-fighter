@@ -45,8 +45,9 @@
 ## Workflow
 
 -   [] Plan with README
--   [] Build HTML, leaving .goblins empty
--   [] Planned goblin object in app.js (id)
+-   [x] Build HTML, leaving .goblins empty
+-   [x] Get DOM elements
+-   [x] Plan goblin object in app.js (id)
 -   [] Render .goblins to page with JS
 -   [] displayGoblins()
 -   [] Add eventListener to newGoblin form
