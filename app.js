@@ -82,6 +82,9 @@ function goblinClickHandler(goblinData) {
     // update DOM with new states for goblin, player, and defeated goblin
     playerHPEl.textContent = playerHP;
     defeatedNumberEl.textContent = defeatedCount;
+
+    const hpEl = document.getElementById(`goblin-hp-${goblinData.id}`);
+    hpEl.textContent = goblinData.hp < 0 ? 0 : goblinData.hp;
 }
 
 /* Display Functions */
