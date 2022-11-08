@@ -50,6 +50,17 @@ formEl.addEventListener('submit', (e) => {
     displayGoblins();
 });
 
+function goblinClickHandler(goblinData) {
+    if (goblinData.hp <= 0) return;
+
+    if (Math.random() < 0.5) {
+        goblinData.hp--;
+        alert('You hit ' + goblinData.name);
+    } else {
+        alert('You tried to hit ' + goblinData.name + ' but missed.');
+    }
+}
+
 /* Display Functions */
 function displayGoblins() {
     goblinsListEl.textContent = '';
