@@ -23,7 +23,7 @@ const goblins = [
     {
         id: 3,
         name: 'Stinky',
-        hp: 3,
+        hp: 1,
     },
 ];
 
@@ -68,6 +68,20 @@ function goblinClickHandler(goblinData) {
     } else {
         alert(goblinData.name + ' tried to hit you but missed!');
     }
+
+    // when goblinHP is 0
+    if (goblinData.hp === 0) {
+        defeatedCount++;
+    }
+
+    if (playerHP === 0) {
+        playerImg.classList.add('game-over');
+        alert('Game over');
+    }
+
+    // update DOM with new states for goblin, player, and defeated goblin
+    playerHPEl.textContent = playerHP;
+    defeatedNumberEl.textContent = defeatedCount;
 }
 
 /* Display Functions */
