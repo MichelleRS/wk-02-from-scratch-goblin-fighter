@@ -45,11 +45,11 @@
 ## Workflow
 
 -   [] Plan with README
--   [] Build HTML, leaving .chicks empty
--   [] Planned chick object in app.js (id)
--   [] Render .chicks to page with JS
--   [] displayChicks()
--   [] Add eventListener to newChick form
+-   [] Build HTML, leaving .goblins empty
+-   [] Planned goblin object in app.js (id)
+-   [] Render .goblins to page with JS
+-   [] displayGoblins()
+-   [] Add eventListener to newGoblin form
 -   [] Gamification
 
 ## Attributions
