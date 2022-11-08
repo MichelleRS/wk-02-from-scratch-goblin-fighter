@@ -51,3 +51,7 @@
 -   [] displayChicks()
 -   [] Add eventListener to newChick form
 -   [] Gamification
+
+## Attributions
+
+forrestkeel92. [_Fighter Woman._](https://pixabay.com/vectors/fighter-warrior-woman-rpg-game-6692465/) Pixabay.
