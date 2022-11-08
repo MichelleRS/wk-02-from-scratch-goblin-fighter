@@ -53,11 +53,20 @@ formEl.addEventListener('submit', (e) => {
 function goblinClickHandler(goblinData) {
     if (goblinData.hp <= 0) return;
 
+    // give player 50% chance of hitting goblin
     if (Math.random() < 0.5) {
         goblinData.hp--;
         alert('You hit ' + goblinData.name);
     } else {
         alert('You tried to hit ' + goblinData.name + ' but missed.');
+    }
+
+    // give player 50% chance of getting hit by goblin
+    if (Math.random() < 0.5) {
+        playerHP--;
+        alert(goblinData.name + ' hit you!');
+    } else {
+        alert(goblinData.name + ' tried to hit you but missed!');
     }
 }
 
