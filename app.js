@@ -52,6 +52,7 @@ formEl.addEventListener('submit', (e) => {
 
 function goblinClickHandler(goblinData) {
     if (goblinData.hp <= 0) return;
+    if (playerHP <= 0) return;
 
     // give player 50% chance of hitting goblin
     if (Math.random() < 0.5) {
@@ -83,8 +84,15 @@ function goblinClickHandler(goblinData) {
     playerHPEl.textContent = playerHP;
     defeatedNumberEl.textContent = defeatedCount;
 
-    const hpEl = document.getElementById(`goblin-hp-${goblinData.id}`);
-    hpEl.textContent = goblinData.hp < 0 ? 0 : goblinData.hp;
+    // update DOM to show goblinHP decrements
+    // const hpEl = document.getElementById(`goblin-hp-${goblinData.id}`);
+    // hpEl.textContent = goblinData.hp < 0 ? 0 : goblinData.hp;
+
+    // update DOM to show goblin emoji when defeated
+    // const emojiEl = document.getElementById(`goblin-face-${goblinData.id}`);
+    // emojiEl.textContent = goblinData.hp > 0 ? '😈' : '💀';
+    renderGoblins(goblinData);
+    displayGoblins();
 }
 
 /* Display Functions */
