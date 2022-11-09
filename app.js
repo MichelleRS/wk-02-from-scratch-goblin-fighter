@@ -35,6 +35,8 @@ let defeatedCount = 0;
 formEl.addEventListener('submit', (e) => {
     e.preventDefault();
 
+    if (playerHP <= 0) return;
+
     const data = new FormData(formEl);
 
     const newGoblin = {
