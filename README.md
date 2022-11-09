@@ -44,14 +44,14 @@
 
 ## Workflow
 
--   [] Plan with README
+-   [x] Plan with README
 -   [x] Build HTML, leaving .goblins empty
 -   [x] Get DOM elements
 -   [x] Plan goblin object in app.js (id)
 -   [x] Render .goblins to page with JS
 -   [x] displayGoblins()
 -   [x] Add eventListener to newGoblin form and display new goblins
--   [] Gamification
+-   [x] Gamification
 
 ## Attributions
 
