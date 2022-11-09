@@ -9,6 +9,7 @@ const defeatedNumberEl = document.querySelector('#defeated-number');
 const playerImg = document.querySelector('#player-img');
 
 /* State */
+// create an array of objects for goblins
 const goblins = [
     {
         id: 1,
@@ -27,32 +28,41 @@ const goblins = [
     },
 ];
 
+// initialize game parameters
 let currentId = 4;
 let playerHP = 10;
 let defeatedCount = 0;
 
 /* Events */
+// add event listener to form submit button
 formEl.addEventListener('submit', (e) => {
+    // prevent default behavior of form submit
     e.preventDefault();
 
+    // disable button if playerHP is <= 0
     if (playerHP <= 0) return;
 
+    // initialize variable to get key/value pairs of the form
     const data = new FormData(formEl);
 
+    // create a newGoblin object
     const newGoblin = {
         id: currentId,
         name: data.get('goblin-name'),
         hp: Math.ceil(Math.random() * 5),
     };
 
+    // increment goblin object id
     currentId++;
 
+    // add rendered newGoblin to the goblins array
     goblins.push(newGoblin);
 
     displayGoblins();
 });
 
 function goblinClickHandler(goblinData) {
+    // disable game when goblin and player HP is <= 0
     if (goblinData.hp <= 0) return;
     if (playerHP <= 0) return;
 
@@ -72,11 +82,12 @@ function goblinClickHandler(goblinData) {
         alert(goblinData.name + ' tried to hit you but missed!');
     }
 
-    // when goblinHP is 0
+    // increment defeatedCount when goblinHP is 0
     if (goblinData.hp === 0) {
         defeatedCount++;
     }
 
+    // game over parameters
     if (playerHP === 0) {
         playerImg.classList.add('game-over');
         alert('Game over');
@@ -86,30 +97,26 @@ function goblinClickHandler(goblinData) {
     playerHPEl.textContent = playerHP;
     defeatedNumberEl.textContent = defeatedCount;
 
-    // update DOM to show goblinHP decrements
-    // const hpEl = document.getElementById(`goblin-hp-${goblinData.id}`);
-    // hpEl.textContent = goblinData.hp < 0 ? 0 : goblinData.hp;
-
-    // update DOM to show goblin emoji when defeated
-    // const emojiEl = document.getElementById(`goblin-face-${goblinData.id}`);
-    // emojiEl.textContent = goblinData.hp > 0 ? '😈' : '💀';
     renderGoblins(goblinData);
     displayGoblins();
 }
 
 /* Display Functions */
 function displayGoblins() {
+    // remove text from input
     goblinsListEl.textContent = '';
 
+    // set parameters for each item in the goblins array
     for (let goblin of goblins) {
+        // create an html div element for key/value pairs
         const goblinEl = renderGoblins(goblin);
+        // listen for a click on goblin emoji
         goblinEl.addEventListener('click', () => {
             goblinClickHandler(goblin);
         });
+        // add rendered goblins to div
         goblinsListEl.append(goblinEl);
     }
 }
 
 displayGoblins();
-
-// (don't forget to call any display functions you want to run on page load!)
