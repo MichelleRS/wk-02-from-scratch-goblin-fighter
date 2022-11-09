@@ -53,6 +53,10 @@
 -   [x] Add eventListener to newGoblin form and display new goblins
 -   [x] Gamification
 
+## Accessibility Additions
+
+-   [x] Change rendered divs to buttons for keyboard accessibility
+
 ## Attributions
 
 forrestkeel92. [_Fighter Woman._](https://pixabay.com/vectors/fighter-warrior-woman-rpg-game-6692465/) Pixabay.

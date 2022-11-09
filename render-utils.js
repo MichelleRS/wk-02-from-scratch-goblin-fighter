@@ -1,5 +1,5 @@
 export function renderGoblins(goblinData) {
-    const goblinEl = document.createElement('div');
+    const goblinEl = document.createElement('button');
     const nameEl = document.createElement('p');
     const emojiEl = document.createElement('p');
     const hpEl = document.createElement('p');

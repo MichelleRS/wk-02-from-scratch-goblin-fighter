@@ -24,10 +24,14 @@ main {
     background-color: rgb(240, 245, 249);
     display: flex;
     gap: 20px;
-    max-width: 300px;
+    width: 300px;
     justify-content: center;
     align-items: center;
     border: 2px solid black;
     margin: 20px 0;
     padding: 10px;
+}
+
+button:focus {
+    border: 3px solid purple;
 }
