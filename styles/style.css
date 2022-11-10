@@ -25,6 +25,11 @@ main {
     margin: 30px 0;
 }
 
+.player-stats {
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
 .goblin-stats {
     max-width: 500px;
     display: flex;
