@@ -57,6 +57,13 @@
 
 -   [x] Change rendered divs to buttons for keyboard accessibility
 
+## CSS Goals
+
+-   [x] Increase font size of elements in button
+-   [] Align header to left of main container
+-   [] Style form elements
+-   [] Style player stats
+
 ## Attributions
 
 forrestkeel92. [_Fighter Woman._](https://pixabay.com/vectors/fighter-warrior-woman-rpg-game-6692465/) Pixabay.
