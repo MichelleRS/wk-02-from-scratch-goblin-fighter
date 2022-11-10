@@ -7,6 +7,7 @@ const formEl = document.querySelector('form');
 const playerHPEl = document.querySelector('#player-hp');
 const defeatedNumberEl = document.querySelector('#defeated-number');
 const playerImg = document.querySelector('#player-img');
+const inputEl = document.querySelector('#goblin-name');
 
 /* State */
 // create an array of objects for goblins
@@ -59,6 +60,9 @@ formEl.addEventListener('submit', (e) => {
     goblins.push(newGoblin);
 
     displayGoblins();
+
+    // clear text input on submit
+    inputEl.value = '';
 });
 
 function goblinClickHandler(goblinData) {
