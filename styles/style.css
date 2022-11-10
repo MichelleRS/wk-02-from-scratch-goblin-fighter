@@ -35,3 +35,8 @@ main {
 button:focus {
     border: 3px solid purple;
 }
+
+.goblinEl-style {
+    font-size: 2rem;
+    margin: 0;
+}
