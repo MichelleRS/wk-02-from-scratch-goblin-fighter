@@ -1,27 +1,69 @@
-## The Golden Rule:
+# Week 02 From Scratch: Goblin Fighter
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+## Project Planning
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+### HTML
 
-## Making a plan
+`<section>` tags within `<main>`:
 
-1. **Make a drawing of your app. Simple "wireframes"**
-1. **Look at the drawing and name the HTML elements you'll need to realize your vision**
-1. **Look at the drawing and imagine using the app. What _state_ do you need to track?**
-1. **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")**
-1. **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
-1. **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change? Does any DOM update?**
-1. **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
-1. **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+-   `.player-stats` with:
+    -   span for .defeated-goblins
+    -   span for .player-hp
+    -   img#player-img
+-   `.goblin-stats`
+    -   form with:
+        -   input for users to input a goblin-name
+        -   button to submit user name
+    -   empty `div` for goblins to display
 
-Additional considerations:
+### State (what I'm tracking)
 
--   Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
--   Consider your data model.
-    -   What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need?
-    -   What are the key/value pairs?
-    -   What arrays might you need?
-    -   What needs to live in a persistence layer?
--   Is there some state we need to initialize?
--   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+-   How many goblins have been defeated
+-   Player HP
+-   Array of goblin HP
+-   #currentId (in order to create new goblins with ids)
+
+### Events
+
+-   on Goblin click:
+
+    -   User receives an alert based on randomness and possible HP change:
+        -   You tried to hit {name} but missed (no change)
+        -   {name} tried to hit you but missed (no change)
+        -   You hit {name} (goblin--)
+            -   When HP is 0, replace 😈 with 🔥
+        -   {name} hit you (player--)
+
+-   When HP is 0:
+    -   Alert Game Over
+    -   Rotate player emoji 90deg
+-   User can challenge a new goblin by inputting a name and clicking a submit button. When submit button is clicked:
+    -   make new goblin
+    -   add new goblin object to goblin array
+    -   update goblin list display
+
+## Workflow
+
+-   [x] Plan with README
+-   [x] Build HTML, leaving .goblins empty
+-   [x] Get DOM elements
+-   [x] Plan goblin object in app.js (id)
+-   [x] Render .goblins to page with JS
+-   [x] displayGoblins()
+-   [x] Add eventListener to newGoblin form and display new goblins
+-   [x] Gamification
+
+## Accessibility Additions
+
+-   [x] Change rendered divs to buttons for keyboard accessibility
+
+## CSS Goals
+
+-   [x] Increase font size of elements in button
+-   [] Align header to left of main container
+-   [] Style form elements
+-   [] Style player stats
+
+## Attributions
+
+forrestkeel92. [_Fighter Woman._](https://pixabay.com/vectors/fighter-warrior-woman-rpg-game-6692465/) Pixabay.

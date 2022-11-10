@@ -1,39 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <h1>Goblin Fighter</h1>
+        </header>
 
-</head>
+        <main>
+            <section class="player-stats">
+                <div class="player">
+                    <img
+                        src="/assets/player.png"
+                        alt="Illustration of woman fighter."
+                        id="player-img"
+                    />
+                    <p>Player HP: <span id="player-hp">10</span></p>
+                </div>
 
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
+                <div class="defeated-goblins">
+                    <p>You have defeated <span id="defeated-number">0</span> goblins.</p>
+                    <!-- where does this get used? -->
+                    <div class="defeated-list"></div>
+                </div>
 
-    <main>
+                <form>
+                    <label for="goblin-name">Name a new goblin to challenge:</label>
+                    <div class="user-input">
+                        <input type="text" name="goblin-name" id="goblin-name" />
+                        <button type="submit" value="submit name">Submit name</button>
+                    </div>
+                </form>
+            </section>
 
-    </main>
+            <section class="goblin-stats">
+                <h2>Choose a Goblin to Challenge:</h2>
+                <div class="goblins"></div>
 
-</body>
-
+                <!-- <form>
+                    <label for="goblin-name">Name a new goblin to challenge:</label>
+                    <input type="text" name="goblin-name" id="goblin-name" />
+                    <button type="submit">Submit name</button>
+                </form> -->
+            </section>
+        </main>
+    </body>
 </html>
